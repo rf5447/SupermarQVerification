@@ -1,0 +1,177 @@
+Running benchmarks for 3 data qubits with bit state [0, 1, 0]...
+
+--- Benchmark with 1 measurement rounds ---
+Loaded benchmark: <cudaqbitcode.BitCode_CUDAQ object at 0x14a5b1b9b4c0>
+hi
+hi2
+                              
+q0 : ──●──────────────────────
+     ╭─┴─╮╭───╮╭───╮          
+q1 : ┤ x ├┤ x ├┤ x ├──────────
+     ├───┤╰─┬─╯╰───╯          
+q2 : ┤ x ├──●────●────────────
+     ╰───╯     ╭─┴─╮╭───╮╭───╮
+q3 : ──────────┤ x ├┤ x ├┤ x ├
+               ╰───╯╰─┬─╯╰───╯
+q4 : ─────────────────●───────
+                              
+
+
+=== Running Benchmark: BitCode_CUDAQ ===
+Data qubits      : 3
+Bit state        : [0, 1, 0]
+Measurement rounds: 1
+----------------------------------------------
+Ideal score: 1.0000
+
+Noise p = 0.0
+    score:  1.0000
+
+Noise p = 0.005
+    score:  0.9706
+
+Noise p = 0.02
+    score:  0.8624
+
+==============================================
+
+
+--- Benchmark with 2 measurement rounds ---
+Loaded benchmark: <cudaqbitcode.BitCode_CUDAQ object at 0x14a4dc75ca60>
+hi
+hi2
+                                             
+q0 : ──●──────────────●──────────────────────
+     ╭─┴─╮╭───╮╭───╮╭─┴─╮╭───╮╭───╮          
+q1 : ┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├──────────
+     ├───┤╰─┬─╯╰───╯╰───╯╰─┬─╯╰───╯          
+q2 : ┤ x ├──●────●─────────●────●────────────
+     ╰───╯     ╭─┴─╮╭───╮╭───╮╭─┴─╮╭───╮╭───╮
+q3 : ──────────┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├
+               ╰───╯╰─┬─╯╰───╯╰───╯╰─┬─╯╰───╯
+q4 : ─────────────────●──────────────●───────
+                                             
+
+
+=== Running Benchmark: BitCode_CUDAQ ===
+Data qubits      : 3
+Bit state        : [0, 1, 0]
+Measurement rounds: 2
+----------------------------------------------
+Ideal score: 1.0000
+
+Noise p = 0.0
+    score:  1.0000
+
+Noise p = 0.005
+    score:  0.9900
+
+Noise p = 0.02
+    score:  0.8981
+
+==============================================
+
+Running benchmarks for 4 data qubits with bit state [0, 1, 0, 1]...
+
+--- Benchmark with 1 measurement rounds ---
+Loaded benchmark: <cudaqbitcode.BitCode_CUDAQ object at 0x14a5b1b9b490>
+hi
+hi2
+                                        
+q0 : ──●────────────────────────────────
+     ╭─┴─╮╭───╮╭───╮                    
+q1 : ┤ x ├┤ x ├┤ x ├────────────────────
+     ├───┤╰─┬─╯╰───╯                    
+q2 : ┤ x ├──●────●──────────────────────
+     ╰───╯     ╭─┴─╮╭───╮╭───╮          
+q3 : ──────────┤ x ├┤ x ├┤ x ├──────────
+               ╰───╯╰─┬─╯╰───╯          
+q4 : ─────────────────●────●────────────
+                         ╭─┴─╮╭───╮╭───╮
+q5 : ────────────────────┤ x ├┤ x ├┤ x ├
+     ╭───╮               ╰───╯╰─┬─╯╰───╯
+q6 : ┤ x ├──────────────────────●───────
+     ╰───╯                              
+
+
+=== Running Benchmark: BitCode_CUDAQ ===
+Data qubits      : 4
+Bit state        : [0, 1, 0, 1]
+Measurement rounds: 1
+----------------------------------------------
+Ideal score: 1.0000
+
+Noise p = 0.0
+    score:  1.0000
+
+Noise p = 0.005
+    score:  0.9706
+
+Noise p = 0.02
+    score:  0.8304
+
+==============================================
+
+
+--- Benchmark with 2 measurement rounds ---
+Loaded benchmark: <cudaqbitcode.BitCode_CUDAQ object at 0x14a4dc763760>
+hi
+hi2
+                                                       
+q0 : ──●──────────────●────────────────────────────────
+     ╭─┴─╮╭───╮╭───╮╭─┴─╮╭───╮╭───╮                    
+q1 : ┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├────────────────────
+     ├───┤╰─┬─╯╰───╯╰───╯╰─┬─╯╰───╯                    
+q2 : ┤ x ├──●────●─────────●────●──────────────────────
+     ╰───╯     ╭─┴─╮╭───╮╭───╮╭─┴─╮╭───╮╭───╮          
+q3 : ──────────┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├──────────
+               ╰───╯╰─┬─╯╰───╯╰───╯╰─┬─╯╰───╯          
+q4 : ─────────────────●────●─────────●────●────────────
+                         ╭─┴─╮╭───╮╭───╮╭─┴─╮╭───╮╭───╮
+q5 : ────────────────────┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├┤ x ├
+     ╭───╮               ╰───╯╰─┬─╯╰───╯╰───╯╰─┬─╯╰───╯
+q6 : ┤ x ├──────────────────────●──────────────●───────
+     ╰───╯                                             
+
+
+=== Running Benchmark: BitCode_CUDAQ ===
+Data qubits      : 4
+Bit state        : [0, 1, 0, 1]
+Measurement rounds: 2
+----------------------------------------------
+Ideal score: 1.0000
+
+Noise p = 0.0
+    score:  1.0000
+
+Noise p = 0.005
+    score:  0.9706
+
+Noise p = 0.02
+    score:  0.7266
+
+==============================================
+
+	Command being timed: "python3 cudaqbitcoderun.py"
+	User time (seconds): 96.33
+	System time (seconds): 0.79
+	Percent of CPU this job got: 92%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:45.53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 373016
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 85508
+	Voluntary context switches: 5564
+	Involuntary context switches: 565
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

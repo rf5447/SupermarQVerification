@@ -1,0 +1,195 @@
+Running benchmarks for 3 data qubits with phase state [0, 1, 0]...
+
+--- Benchmark with 1 measurement rounds ---
+Loaded benchmark: <cudaqphasecode.PhaseCode_CUDAQ object at 0x14ece3e974c0>
+hi
+hi2
+     ╭───╮╭───╮     ╭───╮╭───╮               
+q0 : ┤ h ├┤ h ├──●──┤ h ├┤ h ├───────────────
+     ├───┤╰───╯╭─┴─╮├───┤├───┤╭───╮          
+q1 : ┤ h ├─────┤ z ├┤ z ├┤ h ├┤ x ├──────────
+     ├───┤╭───╮├───┤╰─┬─╯╰───╯├───┤╭───╮     
+q2 : ┤ x ├┤ h ├┤ h ├──●────●──┤ h ├┤ h ├─────
+     ├───┤╰───╯╰───╯     ╭─┴─╮├───┤├───┤╭───╮
+q3 : ┤ h ├───────────────┤ z ├┤ z ├┤ h ├┤ x ├
+     ├───┤╭───╮          ╰───╯╰─┬─╯├───┤├───┤
+q4 : ┤ h ├┤ h ├─────────────────●──┤ h ├┤ h ├
+     ╰───╯╰───╯                    ╰───╯╰───╯
+
+
+=== Running Benchmark: PhaseCode_CUDAQ ===
+Data qubits      : 3
+Phase state      : [0, 1, 0]
+Measurement rounds: 1
+----------------------------------------------
+Ideal score: 1.0000
+
+Noise p = 0.0
+    score:  1.0000
+
+Noise p = 0.005
+    score:  0.7881
+
+Noise p = 0.02
+    score:  0.6794
+
+==============================================
+
+
+--- Benchmark with 2 measurement rounds ---
+Loaded benchmark: <cudaqphasecode.PhaseCode_CUDAQ object at 0x14ec0eab0f40>
+hi
+hi2
+     ╭───╮╭───╮     ╭───╮╭───╮               ╭───╮╭───╮               
+q0 : ┤ h ├┤ h ├──●──┤ h ├┤ h ├────────────●──┤ h ├┤ h ├───────────────
+     ├───┤╰───╯╭─┴─╮├───┤├───┤╭───╮╭───╮╭─┴─╮├───┤├───┤╭───╮          
+q1 : ┤ h ├─────┤ z ├┤ z ├┤ h ├┤ x ├┤ h ├┤ z ├┤ z ├┤ h ├┤ x ├──────────
+     ├───┤╭───╮├───┤╰─┬─╯╰───╯├───┤├───┤╰───╯╰─┬─╯╰───╯├───┤╭───╮     
+q2 : ┤ x ├┤ h ├┤ h ├──●────●──┤ h ├┤ h ├───────●────●──┤ h ├┤ h ├─────
+     ├───┤╰───╯╰───╯     ╭─┴─╮├───┤├───┤╭───╮╭───╮╭─┴─╮├───┤├───┤╭───╮
+q3 : ┤ h ├───────────────┤ z ├┤ z ├┤ h ├┤ x ├┤ h ├┤ z ├┤ z ├┤ h ├┤ x ├
+     ├───┤╭───╮          ╰───╯╰─┬─╯├───┤├───┤╰───╯╰───╯╰─┬─╯├───┤├───┤
+q4 : ┤ h ├┤ h ├─────────────────●──┤ h ├┤ h ├────────────●──┤ h ├┤ h ├
+     ╰───╯╰───╯                    ╰───╯╰───╯               ╰───╯╰───╯
+
+
+=== Running Benchmark: PhaseCode_CUDAQ ===
+Data qubits      : 3
+Phase state      : [0, 1, 0]
+Measurement rounds: 2
+----------------------------------------------
+Ideal score: 1.0000
+
+Noise p = 0.0
+    score:  1.0000
+
+Noise p = 0.005
+    score:  0.7750
+
+Noise p = 0.02
+    score:  0.3780
+
+==============================================
+
+Running benchmarks for 4 data qubits with phase state [0, 1, 0, 1]...
+
+--- Benchmark with 1 measurement rounds ---
+Loaded benchmark: <cudaqphasecode.PhaseCode_CUDAQ object at 0x14ec0eaa6bf0>
+hi
+hi2
+     ╭───╮╭───╮     ╭───╮╭───╮                         
+q0 : ┤ h ├┤ h ├──●──┤ h ├┤ h ├─────────────────────────
+     ├───┤╰───╯╭─┴─╮├───┤├───┤╭───╮                    
+q1 : ┤ h ├─────┤ z ├┤ z ├┤ h ├┤ x ├────────────────────
+     ├───┤╭───╮├───┤╰─┬─╯╰───╯├───┤╭───╮               
+q2 : ┤ x ├┤ h ├┤ h ├──●────●──┤ h ├┤ h ├───────────────
+     ├───┤╰───╯╰───╯     ╭─┴─╮├───┤├───┤╭───╮          
+q3 : ┤ h ├───────────────┤ z ├┤ z ├┤ h ├┤ x ├──────────
+     ├───┤╭───╮          ╰───╯╰─┬─╯╰───╯├───┤╭───╮     
+q4 : ┤ h ├┤ h ├─────────────────●────●──┤ h ├┤ h ├─────
+     ├───┤╰───╯                    ╭─┴─╮├───┤├───┤╭───╮
+q5 : ┤ h ├─────────────────────────┤ z ├┤ z ├┤ h ├┤ x ├
+     ├───┤╭───╮╭───╮               ╰───╯╰─┬─╯├───┤├───┤
+q6 : ┤ x ├┤ h ├┤ h ├──────────────────────●──┤ h ├┤ h ├
+     ╰───╯╰───╯╰───╯                         ╰───╯╰───╯
+
+
+=== Running Benchmark: PhaseCode_CUDAQ ===
+Data qubits      : 4
+Phase state      : [0, 1, 0, 1]
+Measurement rounds: 1
+----------------------------------------------
+Ideal score: 1.0000
+
+Noise p = 0.0
+    score:  1.0000
+
+Noise p = 0.005
+    score:  0.6338
+
+Noise p = 0.02
+    score:  0.3632
+
+==============================================
+
+
+--- Benchmark with 2 measurement rounds ---
+Loaded benchmark: <cudaqphasecode.PhaseCode_CUDAQ object at 0x14ec0eab3b20>
+hi
+hi2
+     ╭───╮╭───╮     ╭───╮╭───╮               ╭───╮╭───╮                    »
+q0 : ┤ h ├┤ h ├──●──┤ h ├┤ h ├────────────●──┤ h ├┤ h ├────────────────────»
+     ├───┤╰───╯╭─┴─╮├───┤├───┤╭───╮╭───╮╭─┴─╮├───┤├───┤╭───╮               »
+q1 : ┤ h ├─────┤ z ├┤ z ├┤ h ├┤ x ├┤ h ├┤ z ├┤ z ├┤ h ├┤ x ├───────────────»
+     ├───┤╭───╮├───┤╰─┬─╯╰───╯├───┤├───┤╰───╯╰─┬─╯╰───╯├───┤╭───╮          »
+q2 : ┤ x ├┤ h ├┤ h ├──●────●──┤ h ├┤ h ├───────●────●──┤ h ├┤ h ├──────────»
+     ├───┤╰───╯╰───╯     ╭─┴─╮├───┤├───┤╭───╮╭───╮╭─┴─╮├───┤├───┤╭───╮     »
+q3 : ┤ h ├───────────────┤ z ├┤ z ├┤ h ├┤ x ├┤ h ├┤ z ├┤ z ├┤ h ├┤ x ├─────»
+     ├───┤╭───╮          ╰───╯╰─┬─╯╰───╯├───┤├───┤╰───╯╰─┬─╯╰───╯├───┤╭───╮»
+q4 : ┤ h ├┤ h ├─────────────────●────●──┤ h ├┤ h ├───────●────●──┤ h ├┤ h ├»
+     ├───┤╰───╯                    ╭─┴─╮├───┤├───┤╭───╮╭───╮╭─┴─╮├───┤├───┤»
+q5 : ┤ h ├─────────────────────────┤ z ├┤ z ├┤ h ├┤ x ├┤ h ├┤ z ├┤ z ├┤ h ├»
+     ├───┤╭───╮╭───╮               ╰───╯╰─┬─╯├───┤├───┤╰───╯╰───╯╰─┬─╯├───┤»
+q6 : ┤ x ├┤ h ├┤ h ├──────────────────────●──┤ h ├┤ h ├────────────●──┤ h ├»
+     ╰───╯╰───╯╰───╯                         ╰───╯╰───╯               ╰───╯»
+
+################################################################################
+
+     
+─────
+     
+─────
+     
+─────
+     
+─────
+     
+─────
+╭───╮
+┤ x ├
+├───┤
+┤ h ├
+╰───╯
+
+
+=== Running Benchmark: PhaseCode_CUDAQ ===
+Data qubits      : 4
+Phase state      : [0, 1, 0, 1]
+Measurement rounds: 2
+----------------------------------------------
+Ideal score: 1.0000
+
+Noise p = 0.0
+    score:  1.0000
+
+Noise p = 0.005
+    score:  0.6099
+
+Noise p = 0.02
+    score:  0.2044
+
+==============================================
+
+	Command being timed: "python3 cudaqphasecoderun.py"
+	User time (seconds): 283.83
+	System time (seconds): 0.88
+	Percent of CPU this job got: 95%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:57.72
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 378696
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 66
+	Minor (reclaiming a frame) page faults: 91376
+	Voluntary context switches: 6778
+	Involuntary context switches: 1393
+	Swaps: 0
+	File system inputs: 340360
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
