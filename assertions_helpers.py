@@ -13,20 +13,29 @@ from state_assertions import (
 )
 
 
-# --- Statistical helpers (cudaq.sample) ---
+# --- Statistical helpers (cudaq.run) ---
+
+def _run_to_counts(kernel, *args, shots):
+    results = cudaq.run(kernel, *args, shots_count=shots)
+    counts = {}
+    for shot in results:
+        key = ''.join('1' if b else '0' for b in shot)
+        counts[key] = counts.get(key, 0) + 1
+    return counts
+
 
 def assert_classical(kernel, *kernel_args, shots=1000, target_qubits=None, pcrit=None, expval=None, negate=False):
-    counts = dict(cudaq.sample(kernel, *kernel_args, shots_count=shots).items())
+    counts = _run_to_counts(kernel, *kernel_args, shots=shots)
     return _classical_stat(counts, target_qubits=target_qubits, pcrit=pcrit, expval=expval, negate=negate)
 
 
 def assert_uniform(kernel, *kernel_args, shots=1000, target_qubits=None, pcrit=None, negate=False):
-    counts = dict(cudaq.sample(kernel, *kernel_args, shots_count=shots).items())
+    counts = _run_to_counts(kernel, *kernel_args, shots=shots)
     return _uniform_stat(counts, target_qubits=target_qubits, pcrit=pcrit, negate=negate)
 
 
 def assert_product(kernel, *kernel_args, group_a, group_b, shots=1000, pcrit=None, negate=False):
-    counts = dict(cudaq.sample(kernel, *kernel_args, shots_count=shots).items())
+    counts = _run_to_counts(kernel, *kernel_args, shots=shots)
     return _product_stat(counts, group_a=group_a, group_b=group_b, pcrit=pcrit, negate=negate)
 
 
