@@ -27,6 +27,20 @@ def _marginalize_sv(state_vector, target_qubits):
 
     return prob_tensor.flatten()
 
+def _reduced_density_matrix(state_vector, target_qubits):
+    state_vector = np.asarray(state_vector, dtype=complex)
+    num_qubits = int(np.log2(len(state_vector)))
+
+    tensor = state_vector.reshape([2] * num_qubits)
+    remaining = [i for i in range(num_qubits) if i not in target_qubits]
+    permutation = list(target_qubits) + remaining
+    tensor = tensor.transpose(permutation)
+
+    dim_target = 2 ** len(target_qubits)
+    dim_rest = 2 ** (num_qubits - len(target_qubits))
+    matrix = tensor.reshape(dim_target, dim_rest)
+
+    return matrix @ matrix.conj().T
 
 def classical_assertion(state_vector, target_qubits=None, tolerance=1e-5, expval=None, negate=False):
     """
@@ -129,4 +143,23 @@ def uniform_assertion(state_vector, target_qubits=None, tolerance=1e-5, negate=F
 
 
 def product_assertion(state_vector, group_a, group_b, tolerance=1e-5, negate=False):
-    raise NotImplementedError("Coco is working on it D:")
+
+    if not group_a or not group_b:
+        raise ValueError("Both group_a and group_b must be non-empty")
+    if set(group_a) & set(group_b):
+        raise ValueError(f"Groups must not overlap, but got indices {sorted(set(group_a) & set(group_b))}")
+
+    state_vector = np.asarray(state_vector, dtype=complex)
+    num_qubits = int(np.log2(len(state_vector)))
+
+    if any(i < 0 or i >= num_qubits for i in group_a + group_b):
+        raise IndexError(f"Indices out of range for {num_qubits}-qubit register")
+
+    rho = _reduced_density_matrix(state_vector, group_a)
+    purity = float(np.real(np.trace(rho @ rho)))
+
+    passed = bool(np.isclose(purity, 1.0, atol=tolerance))
+    if negate:
+        passed = not passed
+
+    return (purity, passed)
