@@ -1,0 +1,92 @@
+Benchmark configuration: <cudaqmb.MerminBell_CUDAQ object at 0x148389793b80>
+
+=== Running Benchmark: MerminBell_CUDAQ ===
+Number of qubits: 3
+Number of Mermin terms: 4
+----------------------------------------------
+Ideal measurement distribution: {'001': 1000}
+Ideal score: 1.0000
+
+Noise p = 0.0
+    counts: {'001': 1000}
+    score: 1.0000
+
+Noise p = 0.005
+    counts: {'000': 4, '001': 977, '011': 7, '100': 1, '101': 4, '110': 7}
+    score: 0.9850
+
+Noise p = 0.02
+    counts: {'000': 10, '010': 9, '001': 923, '011': 20, '100': 7, '101': 15, '110': 16}
+    score: 0.9535
+
+==============================================
+
+Benchmark configuration: <cudaqmb.MerminBell_CUDAQ object at 0x1482ab2a6b00>
+
+=== Running Benchmark: MerminBell_CUDAQ ===
+Number of qubits: 4
+Number of Mermin terms: 8
+----------------------------------------------
+Ideal measurement distribution: {'0001': 1000}
+Ideal score: 1.0000
+
+Noise p = 0.0
+    counts: {'0001': 1000}
+    score: 1.0000
+
+Noise p = 0.005
+    counts: {'0000': 3, '0011': 3, '0001': 979, '0101': 4, '0110': 2, '1100': 2, '1001': 4, '1010': 1, '1110': 2}
+    score: 0.9885
+
+Noise p = 0.02
+    counts: {'0000': 9, '0011': 19, '0001': 885, '0101': 21, '0110': 6, '1100': 4, '1111': 1, '1000': 1, '1101': 1, '1001': 17, '1010': 10, '1110': 26}
+    score: 0.9295
+
+==============================================
+
+Benchmark configuration: <cudaqmb.MerminBell_CUDAQ object at 0x1482ab2a6d70>
+
+=== Running Benchmark: MerminBell_CUDAQ ===
+Number of qubits: 5
+Number of Mermin terms: 16
+----------------------------------------------
+Ideal measurement distribution: {'00001': 1000}
+Ideal score: 1.0000
+
+Noise p = 0.0
+    counts: {'00001': 1000}
+    score: 1.0000
+
+Noise p = 0.005
+    counts: {'00000': 3, '00001': 976, '10001': 5, '00011': 2, '10110': 2, '00101': 2, '01001': 4, '11010': 1, '11100': 1, '11110': 4}
+    score: 0.9860
+
+Noise p = 0.02
+    counts: {'10111': 2, '11000': 1, '10000': 1, '11100': 7, '11010': 3, '00000': 10, '01111': 2, '11110': 23, '00001': 858, '10001': 19, '00010': 1, '00011': 17, '10110': 5, '00101': 16, '00110': 2, '01001': 24, '01110': 9}
+    score: 0.9175
+
+==============================================
+
+	Command being timed: "python3 cudaqmbrun.py"
+	User time (seconds): 1.98
+	System time (seconds): 1.61
+	Percent of CPU this job got: 30%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 472836
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 98815
+	Voluntary context switches: 10749
+	Involuntary context switches: 130
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
