@@ -1,0 +1,98 @@
+Benchmark configuration: <cudaqfswap.QAOAFermionicSwapProxy_CUDAQ object at 0x1547dc68fbb0>
+
+=== Running Benchmark: QAOAFermionicSwapProxy_CUDAQ ===
+Number of qubits: 3
+Number of Hamiltonian terms: 3
+Gamma: 1.2631252763302285
+Beta: 3.44931416947575
+----------------------------------------------
+Ideal measurement distribution: {'000': 156, '010': 169, '111': 177, '001': 177, '101': 166, '110': 155}
+Ideal score: 1.0000
+
+Noise p = 0.0
+    counts: {'000': 172, '010': 159, '111': 173, '001': 184, '101': 154, '110': 158}
+    score: 1.0000
+
+Noise p = 0.005
+    counts: {'000': 159, '010': 179, '111': 177, '001': 167, '011': 1, '100': 5, '101': 156, '110': 156}
+    score: 0.9880
+
+Noise p = 0.02
+    counts: {'000': 136, '010': 171, '111': 177, '001': 164, '011': 7, '100': 27, '101': 151, '110': 167}
+    score: 0.9320
+
+==============================================
+
+Benchmark configuration: <cudaqfswap.QAOAFermionicSwapProxy_CUDAQ object at 0x1547072160b0>
+
+=== Running Benchmark: QAOAFermionicSwapProxy_CUDAQ ===
+Number of qubits: 4
+Number of Hamiltonian terms: 6
+Gamma: 5.020088188440804
+Beta: 3.5342345225541267
+----------------------------------------------
+Ideal measurement distribution: {'1010': 210, '0000': 51, '0010': 2, '0100': 85, '1011': 91, '0110': 9, '1100': 47, '1111': 39, '0101': 198, '0111': 98, '0011': 55, '1000': 105, '1101': 1, '1001': 9}
+Ideal score: 0.9994
+
+Noise p = 0.0
+    counts: {'1010': 197, '1001': 13, '1110': 1, '0000': 50, '0001': 1, '0100': 98, '1011': 95, '0110': 8, '1100': 55, '1111': 57, '0101': 185, '0111': 99, '0011': 43, '1000': 97, '1101': 1}
+    score: 0.9798
+
+Noise p = 0.005
+    counts: {'1010': 211, '1001': 6, '1110': 5, '1101': 2, '0000': 52, '1000': 106, '0011': 38, '0001': 5, '0010': 1, '0100': 99, '1011': 87, '0110': 11, '1100': 50, '1111': 43, '0101': 200, '0111': 84}
+    score: 0.9984
+
+Noise p = 0.02
+    counts: {'1010': 154, '1001': 18, '1110': 10, '1101': 11, '0000': 53, '1000': 97, '0011': 59, '0001': 17, '0010': 16, '0100': 90, '1011': 96, '0110': 11, '1100': 47, '1111': 54, '0101': 165, '0111': 102}
+    score: 0.8945
+
+==============================================
+
+Benchmark configuration: <cudaqfswap.QAOAFermionicSwapProxy_CUDAQ object at 0x15470729a7a0>
+
+=== Running Benchmark: QAOAFermionicSwapProxy_CUDAQ ===
+Number of qubits: 5
+Number of Hamiltonian terms: 10
+Gamma: 0.7854648000529312
+Beta: 0.785373130612778
+----------------------------------------------
+Ideal measurement distribution: {'01110': 505, '10001': 495}
+Ideal score: 1.0000
+
+Noise p = 0.0
+    counts: {'01110': 499, '10001': 501}
+    score: 1.0000
+
+Noise p = 0.005
+    counts: {'01101': 2, '01110': 472, '01010': 6, '00111': 2, '01001': 1, '01111': 4, '11110': 3, '00110': 2, '10101': 2, '11111': 2, '00101': 4, '01011': 6, '00100': 1, '11101': 2, '11010': 1, '10111': 1, '11001': 5, '10110': 3, '10011': 2, '00010': 1, '01100': 5, '10100': 2, '10001': 462, '00001': 3, '11100': 1, '10000': 5}
+    score: 0.9685
+
+Noise p = 0.02
+    counts: {'11010': 9, '11001': 9, '11101': 10, '00000': 2, '01001': 6, '00100': 8, '01011': 20, '00101': 8, '10101': 18, '00110': 12, '11111': 8, '01000': 2, '01101': 5, '01110': 374, '01010': 13, '11110': 8, '01111': 13, '00011': 3, '01100': 9, '10011': 23, '00010': 10, '00001': 21, '11011': 2, '00111': 2, '11100': 3, '10001': 361, '10010': 4, '10100': 7, '10110': 10, '10000': 7, '10111': 4, '11000': 9}
+    score: 0.8750
+
+==============================================
+
+	Command being timed: "python3 cudaqfswaprun.py"
+	User time (seconds): 27.29
+	System time (seconds): 1.14
+	Percent of CPU this job got: 87%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:32.47
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 515784
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 236578
+	Voluntary context switches: 36344
+	Involuntary context switches: 199
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
